@@ -37,7 +37,7 @@ void PrintArray(int* Array, int ArraySize)
 {
 	for (int i = 0; i < ArraySize; i++)
 	{
-		cout<< Array[i] << " ";
+		cout<< Array[i] << " "; //*(Array +1)
 		if (i == (ArraySize - 1))
 		{
 			cout << "\n";
@@ -55,7 +55,7 @@ int main()
 	Fillin(DArray, SizeArray);
 	PrintArray(DArray, SizeArray);
 
-	delete DArray;
+	delete[] DArray;
 	DArray = nullptr;
 	return 0;
 }
